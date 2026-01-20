@@ -48,3 +48,21 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Configuration
+
+- Firebase config is read from Expo runtime env variables. Create a `.env` file in the project root with:
+
+```bash
+EXPO_PUBLIC_FIREBASE_API_KEY=your_api_key
+EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+EXPO_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+```
+
+- Restart the dev server after adding or changing `.env` values:
+
+```bash
+npx expo start -c
+```
+
+- Do not use `dotenv` in React Native runtime; Node APIs like `process.cwd()` and `fs` are unavailable on device.
