@@ -40,7 +40,7 @@ const ParqueCard = ({ item }: Props) => {
                        <Text style={styles.likes}>{item.likes}</Text>
                    </TouchableOpacity>
                </View>
-               <Image source={{ uri: "http://www.ies-azarquiel.es/paco/apiparques/img/banderas/c" + item.comunidad + ".gif" }} style={styles.comunidad} />
+               <Image source={{ uri: "https://pacopul.github.io/parquesFS/assets/banderas/c" + item.comunidad + ".gif" }} style={styles.comunidad} />
                <RenderHTML
                    contentWidth={width}
                    source={{ html: item.descripcion }}
